@@ -1,0 +1,8 @@
+TODO:
+
+1-darle efecto a proyectos en portfolio al darle hover
+2-agregar enlaces a proyectos en portfolio, y completar con proyectos
+de escritorio tambien
+3-darle a la pagina en general, colores alternativos
+4- responsive
+5- añadir funcionalidad de form en contact
