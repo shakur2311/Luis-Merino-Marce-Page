@@ -190,6 +190,39 @@ input#contactOption:checked ~ .contactContainer{
 .aboutContainer .aboutImage img{
     width: 100%;
 }
+@media only screen and (max-width: 798px){
+    .aboutContainer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2em;
+        padding:10px;
+    }
+    .aboutContainer .aboutText{
+        width: 80%;
+    }
+    .aboutContainer .aboutImage{
+        width: 40%;
+    }
+    
+    .aboutContainer .aboutText h2{
+        font-size: 10vw;
+    }
+    .aboutContainer .aboutText h1{
+        font-size: 4vw;
+    }
+    .aboutContainer .aboutText h3{
+        text-align: center;
+    }
+}
+
+
+@media only screen and (min-width:798px) and (max-width: 1290px){
+    .aboutContainer .aboutText h1{
+        font-size: 2.5vw;
+    }
+}
+
 /* skills container */
 .skillsContainer{
     width:80vw;
@@ -226,6 +259,7 @@ input#contactOption:checked ~ .contactContainer{
     display:flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 .skillsContainer .skillsIcons .col-3 div i{
     font-size: 4vw;
@@ -234,6 +268,7 @@ input#contactOption:checked ~ .contactContainer{
 .skillsContainer .skillsIcons .col-3 div p{
     font-size: 1.3vw;
     transition: font-size .3s linear;
+    margin-top: 5px;
 }
 .skillsContainer .skillsIcons .col-3>div:hover i{
     font-size: 4.3vw;
@@ -269,7 +304,14 @@ input#contactOption:checked ~ .contactContainer{
     color: #3fb27f;
 }
 
-
+@media only screen and (max-width: 798px){
+    .skillsContainer .skillsIcons .col-3{
+        width:45%;
+    }
+    .skillsContainer .skillsIcons .col-3 div i{
+        font-size: 8vw;
+    }
+}
 
 /* portfolio container */
 .portfolioContainer{
@@ -303,10 +345,17 @@ input#contactOption:checked ~ .contactContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1em;
-    text-align: center;
+    
     
 }
+.portfolioContainer .projectBox p{
+    font-size: 1vw;
+    text-align: center;
+    color:var(--secondary-color);
+    font-weight: bold;
+    -webkit-text-stroke: 0.5px var(--primary-color);
+}
+
 .portfolioContainer .projectBox img{
     object-fit: cover;
     background: var(--primary-color);
@@ -314,13 +363,40 @@ input#contactOption:checked ~ .contactContainer{
     border:2px solid transparent;
     border-radius: 5px;
     transition: all .5s ease-in-out;
+    height: 130px;
+    width: 100%;
+    
+}
+.portfolioContainer .projectBox a{
+    margin-bottom: 10px;
 }
 .portfolioContainer .projectBox img:hover{
     transform: scale(105%);
-
 }
 
-
+@media only screen and (max-width: 1150px) and (min-width: 798px) {
+    .portfolioContainer .projectBox img{
+        height: 80px;
+    }
+}
+@media only screen and (max-width: 798px){
+    .portfolioContainer .col-2{
+        width:45%;
+    }
+    .portfolioContainer .projectsBox .projectBox img{
+        height:60px;
+    }
+    .portfolioContainer .projectsBox{
+        column-gap: 3vw;
+        row-gap: 1em;
+    }
+    .portfolioContainer .projectsBox p{
+        font-size: 1.5vw;
+        -webkit-text-stroke: 0;
+        color:#fff;
+        font-weight: bold;
+    }
+}
 
 
 
@@ -369,11 +445,11 @@ input#contactOption:checked ~ .contactContainer{
 .contactContainer #second-socialBox form{
     display: flex;
     flex-direction: column;
-    width: 40vw;
+    width: 60%;
     margin:auto;
 }
 
-.contactContainer #second-socialBox form label[for="mailInput"],label[for="subjectInput"]{
+.contactContainer #second-socialBox form label[for="nameInput"],label[for="subjectInput"]{
     transform: translateY(-48px);
     color:#fff;
     padding:0 10px;
@@ -382,7 +458,7 @@ input#contactOption:checked ~ .contactContainer{
 }
 
 
-.contactContainer #second-socialBox form #subjectInput,#mailInput{
+.contactContainer #second-socialBox form .subjectInput,.nameInput{
     margin-bottom: 10px;
     height: 50px;
     padding:10px;
@@ -403,35 +479,122 @@ input#contactOption:checked ~ .contactContainer{
     font-size:1.5vw;
     resize: none;
 }
-.contactContainer #second-socialBox form #mailInput:focus ~ label[for="mailInput"]{
+.contactContainer #second-socialBox form .subjectInput:-webkit-autofill,.nameInput:-webkit-autofill{
+    background:transparent;
+}
+.contactContainer #second-socialBox form .nameInput:focus ~ label[for="nameInput"]{
     transform: translateY(-90px);
     font-size:1.2em;
     color:var(--primary-color);
 }
-.contactContainer #second-socialBox form #subjectInput:focus ~ label[for="subjectInput"]{
+.contactContainer #second-socialBox form .subjectInput:focus ~ label[for="subjectInput"]{
     transform: translateY(-90px);
     font-size:1.2em;
     color:var(--primary-color);
 }
-
 
 .contactContainer #second-socialBox form textarea:focus{
     outline: none !important;
 }
+
+.contactContainer #second-socialBox form .nameInput:valid ~ label[for="nameInput"]{
+    transform: translateY(-90px);
+    font-size:1.2em;
+    color:var(--primary-color);
+}
+.contactContainer #second-socialBox form .subjectInput:valid ~ label[for="subjectInput"]{
+    transform: translateY(-90px);
+    font-size:1.2em;
+    color:var(--primary-color);
+}
+
 
 .contactContainer #second-socialBox form button{
     padding:10px 0px;
     border-radius: 10px;
     border:none;
     width:100%;
-    background: linear-gradient(135deg,#ff0e3c,#000);
+    background: linear-gradient(135deg, var(--primary-color) 62%, var(--secondary-color) 100%);
     color:#fff;
     font-size:1em;
     cursor: pointer;
 }
 
+@media only screen and (max-width: 798px){
+    .contactContainer #second-socialBox{
+        margin-top:100px;
+    }
+    .contactContainer #second-socialBox form{
+        width: 100%;
+    }
+    .contactContainer #second-socialBox input[type="text"]{
+        font-size:1.5em;
+    }
+    .contactContainer #second-socialBox .messageInput{
+        font-size:1.5em;
+    }
+    .contactContainer #second-socialBox button{
+        margin-top:50px;
+    }
+}
 
+/* Correo enviado modal */
 
+.mailSentModalContainer{
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    position: relative;
+    backdrop-filter: blur(5px);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.mailSentModalContainer .mailSentModal{
+    position: absolute;
+    top:30%;
+    left:35vw;
+    height:30vh;
+    width:30vw;
+    background:rgba(0,0,0,1);
+    border-radius:20px;
+    color:#fff;
+    text-shadow: 4px 1px 3px var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px groove transparent;
+    position: relative;
+    
+}
+.mailSentModalContainer .mailSentModal:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(1.01);
+    background: linear-gradient(135deg, var(--primary-color) 62%, var(--secondary-color) 100%);
+    border-radius:20px;
+    
+}
 
+.mailSentModalContainer .mailSentModal button{
+    margin-top:20px;
+    background:none;
+    border: none;
+    cursor: pointer;
+    color:#fff;
+    font-size:1em;
+    text-shadow: 4px 1px 3px var(--primary-color);
+}
 
-
+@media only screen and (max-width: 798px){
+    .mailSentModalContainer .mailSentModal{
+        left:20%;
+        width:60vw;
+    }
+}

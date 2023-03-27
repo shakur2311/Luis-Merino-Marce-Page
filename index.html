@@ -50,44 +50,58 @@
             <div class="projectsBox" id="projectsBox">
                 <div class="col-2">
                     <div class="projectBox" id="projectBox">
-                        <img src="./images/frontend_ecommerce.png" alt="" width="100%" height="100px">
-                        Desarrollo Interfaz Web (HTML,CSS,JS)
+                        <a href="https://ecommerce-frontend-ruby.vercel.app" target="_blank">
+                            <img src="./images/frontend_ecommerce.png" >
+                        </a>
+                        <p>Desarrollo Interfaz Web (HTML,CSS,JS)</p>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="projectBox" id="projectBox">
-                        <img src="./images/weatherApp.png" alt="" width="100%" height="100px">
-                        Weather App (Reactjs,Bootstrap)
+                        <a href="https://react-weather-project-delta.vercel.app" target="_blank">
+                            <img src="./images/weatherApp.png" alt="">
+                        </a>
+                        <p>Weather App (Reactjs,Bootstrap)</p>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="projectBox" id="projectBox">
-                        <img src="./images/booksManager.png" alt="" width="100%" height="100px">
-                        Books Manager (Reactjs,Bootstrap)
+                        <a href="https://react-books-project-eosin.vercel.app" target="_blank">
+                            <img src="./images/booksManager.png" alt="">
+                        </a>
+                        <p>Books Manager (Reactjs,Bootstrap)</p>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="projectBox" id="projectBox">
-                        <img src="./images/emojisApp.png" alt="" width="100%" height="100px">
-                        Emojis Selector (Reactjs,Bootstrap)
+                        <a href="https://emojis-app-eight.vercel.app" target="_blank">
+                            <img src="./images/emojisApp.png" alt="">
+                        </a>
+                        <p>Emojis Selector (Reactjs,Bootstrap)</p>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="projectBox" id="projectBox">
-                        <img src="./images/tasksManager.png" alt="" width="100%" height="100px">
-                        Tasks Manager (Reactjs,Bootstrap)
+                        <a href="https://tasks-manager-app.vercel.app" target="_blank">
+                            <img src="./images/tasksManager.png" alt="">
+                        </a>
+                        <p>Tasks Manager (Reactjs,Bootstrap)</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="projectBox" id="projectBox"> 
+                        <a href="https://github.com/shakur2311/parking-system" target="_blank">
+                            <img src="./images/parking-system.png" alt="">
+                        </a>
+                        <p>Parking System (Laravel, Bootstrap, MySql)</p>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="projectBox" id="projectBox">
-                        <img src="./images/weatherApp.png" alt="" width="100%" height="100px">
-                        hola6
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="projectBox" id="projectBox">
-                        <img src="./images/weatherApp.png" alt="" width="100%" height="100px">
-                        hola7
+                        <a href="https://github.com/shakur2311/impacto-system" target="_blank">
+                            <img src="./images/weatherApp.png" alt="">
+                        </a>
+                        <p>Impacto Imp. System (.NET,Sql Server,Bunifu UI tools)</p>
                     </div>
                 </div>
             </div>
@@ -103,22 +117,28 @@
                 <div class="col-2"><a href="mailto:luismerinomarce@gmail.com"><i class="fa-sharp fa-solid fa-envelope"></i></a></div>          
             </div>
             <div id="second-socialBox">
-                <form action="">
-                    <input type="email" id="mailInput" class="mailInput" name="mailInput">
-                    <label for="mailInput">Mail</label>
+                <form autocomplete="off">
+                    <input type="text" id="nameInput" class="nameInput" name="nameInput"  placeholder="" autocomplete="off" required >
+                    <label for="nameInput">Name</label>
                     
-                    <input type="text" id="subjectInput" class="subjectInput" name="subjectInput">
+                    <input type="text" id="subjectInput" class="subjectInput" name="subjectInput" placeholder="" autocomplete="off" required>
                     <label for="subjectInput">Subject</label>
                     
-                    <textarea name="messageInput" id="messageInput" name="messageInput" cols="30" rows="3" placeholder="Type your message.."></textarea>
-                    <button type="submit">Enviar</button>
+                    <textarea name="messageInput" id="messageInput" name="messageInput" class="messageInput" cols="30" rows="3" placeholder="Type your message.." required></textarea>
+                    <button type="button" onclick="emailSend()">Enviar</button>
                 </form>
+            </div>
+        </div>
+        <div class="mailSentModalContainer" id="mailSentModalContainer">
+            <div class="mailSentModal" id="mailSentModal">
+                Correo enviado con éxito!
+                <button type="button" class="closeModal" onclick="closeModal()">OK</button>
             </div>
         </div>
     </section>
     
     
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
