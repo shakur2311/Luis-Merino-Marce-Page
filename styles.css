@@ -307,6 +307,12 @@ input#contactOption:checked ~ .contactContainer{
 .skillsContainer .skillsIcons .col-3>div:hover #vueIcon{
     color: #3fb27f;
 }
+.skillsContainer .skillsIcons .col-3>div:hover #angularIcon{
+    color: #dd0330;
+}
+.skillsContainer .skillsIcons .col-3>div:hover #csharpIcon{
+    color: #68217a;
+}
 
 @media only screen and (max-width: 798px){
     .skillsContainer .skillsIcons .col-3{

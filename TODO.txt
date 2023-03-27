@@ -1,4 +1,3 @@
 TODO:
 
-3-darle a la pagina en general, colores alternativos
-4- responsive
+
