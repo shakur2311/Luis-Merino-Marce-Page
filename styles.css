@@ -200,6 +200,7 @@ input#contactOption:checked ~ .contactContainer{
     }
     .aboutContainer .aboutText{
         width: 80%;
+        text-align: center;
     }
     .aboutContainer .aboutImage{
         width: 40%;
@@ -207,12 +208,15 @@ input#contactOption:checked ~ .contactContainer{
     
     .aboutContainer .aboutText h2{
         font-size: 10vw;
+        text-align: center;
     }
     .aboutContainer .aboutText h1{
         font-size: 4vw;
+        text-align: center;
     }
     .aboutContainer .aboutText h3{
         text-align: center;
+        font-size: 2vw;
     }
 }
 
