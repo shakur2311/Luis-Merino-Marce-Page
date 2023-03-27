@@ -36,15 +36,7 @@ body{
     -webkit-fill: yellow !important;
 } */
 /* boostrap styles */
-.col-4{
-    width:33%;
-}
-.col-3{
-    width:25%;
-}
-.col-2{
-    width:20%;
-}
+
 /* variables */
 :root{
     --primary-color: #ff0e3c;
@@ -74,7 +66,7 @@ body{
     color:var(--secondary-color);
     font-weight: bold;
     -webkit-text-stroke: 0.5px var(--primary-color);
-    font-size: 1.3em;
+    font-size: 2em;
     background: rgba(0,0,0,1);
 }
 
@@ -87,6 +79,14 @@ body{
     font-weight: bold;
     -webkit-text-stroke: 0.5px var(--primary-color);
     border-top: 1mm ridge var(--primary-color);
+}
+@media only screen and (max-width: 798px){
+    .navigation ul li label{
+        font-size:1em;
+    }
+    .navigation ul li label:hover{
+        font-size: 1em;
+    }
 }
 /* inputs checks */
 input[type="checkbox"]{
@@ -238,86 +238,98 @@ input#contactOption:checked ~ .contactContainer{
     border-radius: 20px;
     transform: translateY(-100%);
     transition: all .4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .skillsContainer h2{
     text-align: center;
-    font-size: 3vw;
+    font-size: 2em;
     letter-spacing: 5px;
     text-shadow: 4px 1px 3px var(--primary-color);
+    
 }
 .skillsContainer .skillsIcons{
     display:flex;
-    margin-top:50px;
+    margin-top:30px;
     flex-wrap: wrap;
     row-gap: 3em;
+
 }
-.skillsContainer .skillsIcons .col-3{
+.skillsContainer .skillsIcons .col{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width:25%;
     
 }
-.skillsContainer .skillsIcons .col-3 div{
+.skillsContainer .skillsIcons .col div{
     display:flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-.skillsContainer .skillsIcons .col-3 div i{
+.skillsContainer .skillsIcons .col div i{
     font-size: 4vw;
     transition: font-size .3s linear;
 }
-.skillsContainer .skillsIcons .col-3 div p{
+.skillsContainer .skillsIcons .col div p{
     font-size: 1.3vw;
     transition: font-size .3s linear;
     margin-top: 5px;
 }
-.skillsContainer .skillsIcons .col-3>div:hover i{
+.skillsContainer .skillsIcons .col>div:hover i{
     font-size: 4.3vw;
 }
-.skillsContainer .skillsIcons .col-3>div:hover p{
+.skillsContainer .skillsIcons .col>div:hover p{
     font-size: 1vw;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #htmlIcon{
+.skillsContainer .skillsIcons .col>div:hover #htmlIcon{
     color:#dd4b25;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #cssIcon{
+.skillsContainer .skillsIcons .col>div:hover #cssIcon{
     color:#2862e9;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #jsIcon{
+.skillsContainer .skillsIcons .col>div:hover #jsIcon{
     color:#e8d44d;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #reactIcon{
+.skillsContainer .skillsIcons .col>div:hover #reactIcon{
     color: #00d1f7;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #laravelIcon{
+.skillsContainer .skillsIcons .col>div:hover #laravelIcon{
     color: #f72c1f;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #dbIcon{
+.skillsContainer .skillsIcons .col>div:hover #dbIcon{
     color: #688f31;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #gitIcon{
+.skillsContainer .skillsIcons .col>div:hover #gitIcon{
     color: #000000;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #nodeIcon{
+.skillsContainer .skillsIcons .col>div:hover #nodeIcon{
     color: #509941;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #vueIcon{
+.skillsContainer .skillsIcons .col>div:hover #vueIcon{
     color: #3fb27f;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #angularIcon{
+.skillsContainer .skillsIcons .col>div:hover #angularIcon{
     color: #dd0330;
 }
-.skillsContainer .skillsIcons .col-3>div:hover #csharpIcon{
+.skillsContainer .skillsIcons .col>div:hover #csharpIcon{
     color: #68217a;
 }
 
-@media only screen and (max-width: 798px){
-    .skillsContainer .skillsIcons .col-3{
-        width:45%;
+@media only screen and (max-width: 1200px){
+    .skillsContainer{
+        padding: 30px 30px;
     }
-    .skillsContainer .skillsIcons .col-3 div i{
+    .skillsContainer h2{
+        font-size:1.5em;
+    }
+    .skillsContainer .skillsIcons .col{
+        width:32%;
+    }
+    .skillsContainer .skillsIcons .col div i{
         font-size: 8vw;
     }
 }
@@ -333,10 +345,13 @@ input#contactOption:checked ~ .contactContainer{
     border-radius: 20px;
     transform: translateY(-100%);
     transition: all .4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .portfolioContainer h2{
     text-align: center;
-    font-size: 3vw;
+    font-size: 2em;
     letter-spacing: 5px;
     text-shadow: 4px 1px 3px var(--primary-color);
 }
@@ -344,11 +359,13 @@ input#contactOption:checked ~ .contactContainer{
 .portfolioContainer .projectsBox{
     display: flex;
     row-gap: 3em;
-    column-gap: 4vw;
+    column-gap: 2vw;
     flex-wrap: wrap;
-    margin-top:50px;  
+    margin-top:30px;  
 }
-
+.portfolioContainer .projectsBox .col{
+    width:22%;
+}
 .portfolioContainer .projectBox{
     width: 100%;
     display: flex;
@@ -372,7 +389,7 @@ input#contactOption:checked ~ .contactContainer{
     border:2px solid transparent;
     border-radius: 5px;
     transition: all .5s ease-in-out;
-    height: 130px;
+    height: 15vh;
     width: 100%;
     
 }
@@ -383,14 +400,23 @@ input#contactOption:checked ~ .contactContainer{
     transform: scale(105%);
 }
 
-@media only screen and (max-width: 1150px) and (min-width: 798px) {
+@media only screen and (max-width: 1200px) and (min-width: 798px) {
     .portfolioContainer .projectBox img{
         height: 80px;
     }
+    .portfolioContainer h2{
+        font-size: 1.5em;
+    }
 }
 @media only screen and (max-width: 798px){
-    .portfolioContainer .col-2{
-        width:45%;
+    .portfolioContainer{
+        padding:30px 30px;
+    }
+    .portfolioContainer h2{
+        font-size: 1.5em;
+    }
+    .portfolioContainer .projectsBox .col{
+        width:30%;
     }
     .portfolioContainer .projectsBox .projectBox img{
         height:60px;
@@ -421,10 +447,13 @@ input#contactOption:checked ~ .contactContainer{
     border-radius: 20px;
     transform: translateY(-100%);
     transition: all .4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .contactContainer h2{
     text-align: center;
-    font-size: 3vw;
+    font-size: 2em;
     letter-spacing: 5px;
     text-shadow: 4px 1px 3px var(--primary-color);
 }
@@ -438,13 +467,14 @@ input#contactOption:checked ~ .contactContainer{
     justify-content: space-between;
 
 }
-.contactContainer #first-socialBox .col-2{
+.contactContainer #first-socialBox .col{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 20%;
 }
 
-.contactContainer #first-socialBox .col-2 i{
+.contactContainer #first-socialBox .col i{
     font-size: 3.5vw;
     color:#fff;
 }
@@ -476,7 +506,7 @@ input#contactOption:checked ~ .contactContainer{
     border-radius:20px;
     background: transparent;
     color:#fff;
-    font-size:1.5vw;
+    font-size:1em;
 }
 .contactContainer #second-socialBox form textarea{
     margin-bottom:10px;
@@ -485,7 +515,7 @@ input#contactOption:checked ~ .contactContainer{
     padding:10px;
     background: transparent;
     color:#fff;
-    font-size:1.5vw;
+    font-size:1.5em;
     resize: none;
 }
 .contactContainer #second-socialBox form .subjectInput:-webkit-autofill,.nameInput:-webkit-autofill{
@@ -529,21 +559,28 @@ input#contactOption:checked ~ .contactContainer{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 798px){
+@media only screen and (max-width: 1200px){
+    .contactContainer{
+        padding: 30px 30px;
+    }
+    .contactContainer h2{
+        font-size:1.5em;
+        margin-bottom:10px;
+    }
+    .contactContainer #first-socialBox .col i{
+        font-size:1.2em;
+    }
     .contactContainer #second-socialBox{
-        margin-top:100px;
+        margin-top:30px;
     }
     .contactContainer #second-socialBox form{
         width: 100%;
     }
-    .contactContainer #second-socialBox input[type="text"]{
-        font-size:1.5em;
-    }
-    .contactContainer #second-socialBox .messageInput{
-        font-size:1.5em;
+    .contactContainer #second-socialBox form .nameInput ~ label{
+        margin-bottom:0px;
     }
     .contactContainer #second-socialBox button{
-        margin-top:50px;
+        margin-top:0px;
     }
 }
 
