@@ -50,10 +50,10 @@ const handleCheckBox = (event)=>{
 
 const textWhoiamChanger = ()=>{
     setTimeout(() => {
-        whoiamText.innerHTML = "FRONTEND DEVELOPER"
+        whoiamText.textContent = "FRONTEND DEVELOPER"
     }, 0);
     setInterval(()=>{
-        whoiamText.innerHTML = `${whoiamTextsArray[contador]}`
+        whoiamText.textContent = `${whoiamTextsArray[contador]}`
         if(contador==whoiamTextsArray.length-1){
             contador=0;
         }else{
