@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Merino | FullStack Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navigation" id="navigation">
+        <ul>
+            <li><label for="aboutOption" id="aboutLabel">About</label></li>
+            <li><label for="skillsOption" id="skillsLabel">Skills</label></li>
+            <li><label for="portfolioOption" id="portfolioLabel">Portfolio</label></li>
+            <li><label for="contactOption" id="contactLabel">Contact</label></li>
+        </ul>
+    </nav>
+    <section class="mainBg" id="mainBg">
+        <input type="checkbox" id="aboutOption" name="aboutOption" onchange="handleCheckBox(event)" checked>
+        <div class="aboutContainer" id="aboutContainer">
+            <div id="aboutText" class="aboutText">
+                <h2>MY NAME IS LUIS MERINO</h2>
+                <div><h1>I AM <span class="whoiam-text" id="whoiam-text"></span></h1></div>
+                <h3>
+                    I am a software developer with more than two years of experience, I have knowledge of different languages ​​and technologies and I am constantly improving my skills and learning.
+                </h3>
+            </div>           
+            <div id="aboutImage" class="aboutImage">
+                <img id="codingImage" src="./images/coding2.png" alt=""/>
+            </div>
+        </div>
+        <input type="checkbox" id="skillsOption" name="skillsOption" onchange="handleCheckBox(event)">
+        <div class="skillsContainer" id="skillsContainer">
+            <h2>KNOWLEDGE AND SKILLS</h2>
+            <div class="skillsIcons">
+                <div class="col"><div><i class="fa-brands fa-html5" id="htmlIcon"></i><p>HTML-5</p></div></div>
+                <div class="col"><div><i class="fa-brands fa-css3-alt" id="cssIcon"></i><p>CSS-3</p></div></div>
+                <div class="col"><div><i class="fa-brands fa-square-js" id="jsIcon"></i><p>JAVASCRIPT</p></div></div>
+                <div class="col"><div><i class="fa-brands fa-react" id="reactIcon"></i><p>REACT</p></div></div>
+                <div class="col"><div><i class="fa-brands fa-laravel" id="laravelIcon"></i><p>LARAVEL</p></div></div>
+                <div class="col"><div><i class="fa-solid fa-database" id="dbIcon"></i><p>SQL & MYSQL</p></div></div>
+                <div class="col"><div><i class="fa-brands fa-github" id="gitIcon"></i><p>GITHUB</p></div></div>
+                <div class="col"><div><i class="fa-brands fa-node" id="nodeIcon"></i><p>NODEJS</p></div></div>
+                <div class="col"><div><i class="fa-brands fa-vuejs" id="vueIcon"></i><p>VUEJS</p></div></div>  
+                <div class="col"><div><i class="fa-brands fa-angular" id="angularIcon"></i><p>ANGULAR</p></div></div> 
+                <div class="col"><div><i class="devicon-csharp-plain" id="csharpIcon"></i><p>C#</p></div></div>                                                
+            </div>   
+        </div>
+        <input type="checkbox" id="portfolioOption" name="portfolioOption" onchange="handleCheckBox(event)">
+        <div class="portfolioContainer" id="portfolioContainer">
+            <h2>PORTFOLIO & PROJECTS</h2>
+            <div class="projectsBox" id="projectsBox">
+                <div class="col">
+                    <div class="projectBox" id="projectBox">
+                        <a href="https://ecommerce-frontend-ruby.vercel.app" target="_blank">
+                            <img src="./images/frontend_ecommerce.png" alt="frontend_ecommerce">
+                        </a>
+                        <p>Desarrollo Interfaz Ecommerce (HTML,CSS,JS)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="projectBox" id="projectBox">
+                        <a href="https://react-weather-project-delta.vercel.app" target="_blank">
+                            <img src="./images/weatherApp.png" alt="weatherApp">
+                        </a>
+                        <p>Weather App (Reactjs,Bootstrap)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="projectBox" id="projectBox">
+                        <a href="https://react-books-project-eosin.vercel.app" target="_blank">
+                            <img src="./images/booksManager.png" alt="booksManager">
+                        </a>
+                        <p>Books Manager (Reactjs,Bootstrap)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="projectBox" id="projectBox">
+                        <a href="https://emojis-app-eight.vercel.app" target="_blank">
+                            <img src="./images/emojisApp.png" alt="emojisApp">
+                        </a>
+                        <p>Emojis Selector (Reactjs,Bootstrap)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="projectBox" id="projectBox">
+                        <a href="https://tasks-manager-app.vercel.app" target="_blank">
+                            <img src="./images/tasksManager.png" alt="tasksManager">
+                        </a>
+                        <p>Tasks Manager (Reactjs,Bootstrap)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="projectBox" id="projectBox"> 
+                        <a href="https://github.com/shakur2311/parking-system" target="_blank">
+                            <img src="./images/parking-system.png" alt="parking-system">
+                        </a>
+                        <p>Parking System (Laravel, Bootstrap, MySql)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="projectBox" id="projectBox">
+                        <a href="https://github.com/shakur2311/impacto-system" target="_blank">
+                            <img src="./images/impacto-system.png" alt="impacto-system">
+                        </a>
+                        <p>Impacto Imp. System (.NET,Sql Server,Bunifu UI tools)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="projectBox" id="projectBox">
+                        <a href="https://shakur2311.github.io/4boostpag/" target="_blank">
+                            <img src="./images/4boostPage.PNG" alt="4boostPage">
+                        </a>
+                        <p>Página 4Boost (HTML,CSS,JS,Bootstrap)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="projectBox" id="projectBox">
+                        <a href="https://github.com/shakur2311/carnes-qr" target="_blank">
+                            <img src="./images/carnes.PNG" alt="carnes System">
+                        </a>
+                        <p>Generador de carnes y QR (EJS,NODEJS,EXPRESS,MULTER)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="projectBox" id="projectBox">
+                        <a href="https://github.com/shakur2311/rrhhBoletas/tree/master" target="_blank">
+                            <img src="./images/boletassys.JPG" alt="boletassys">
+                        </a>
+                        <p>Generador de boletas RRHH y envio de estas por correo (electronjs,html,css,js)</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        <input type="checkbox" id="contactOption" name="contactOption" onchange="handleCheckBox(event)">
+        <div class="contactContainer" id="contactContainer">
+            <h2>CONTACT & SOCIALS</h2>
+            <div id="first-socialBox">
+                <div class="col"><a href="https://www.facebook.com/lmerinomarce" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>    
+                <div class="col"><a href="https://www.instagram.com/lmerinomarce/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="col"><a href="https://www.linkedin.com/in/luis-merino-marce-3a65a3141/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="col"><a href="https://github.com/shakur2311" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                <div class="col"><a href="mailto:luismerinomarce@gmail.com"><i class="fa-sharp fa-solid fa-envelope"></i></a></div>          
+            </div>
+            <div id="second-socialBox">
+                <form autocomplete="off" onsubmit="emailSend(event)">
+                    <input type="text" id="nameInput" class="nameInput" name="nameInput"  placeholder="" autocomplete="off" required >
+                    <label for="nameInput">Correo</label>
+                    
+                    <input type="text" id="subjectInput" class="subjectInput" name="subjectInput" placeholder="" autocomplete="off" required>
+                    <label for="subjectInput">Subject</label>
+                    
+                    <textarea name="messageInput" id="messageInput" name="messageInput" class="messageInput" cols="30" rows="3" placeholder="Type your message.." required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="mailSentModalContainer" id="mailSentModalContainer">
+            <div class="mailSentModal" id="mailSentModal">
+                Correo enviado con éxito!
+                <button type="button" class="closeModal" onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </section>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
